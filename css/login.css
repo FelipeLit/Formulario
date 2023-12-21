@@ -1,0 +1,13 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vh-100{
+    background: rgb(24, 30, 75); 
+    background: linear-gradient (90 deg, rgba(24,30,75,1) 0%, rgba(107,92,255,1) 100%, rgba(255,255,255,1) 100%)
+}
+#error{
+    color: red;
+}
