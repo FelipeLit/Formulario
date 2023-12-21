@@ -9,23 +9,32 @@ let estudiantes = [
 
 function checkLogin (){
     
-let inputEmail = document.getElementById("email").value;
-let inputPassword = document.getElementById("pass").value;
+let inputEmail = document.getElementById("email");
+let inputPassword = document.getElementById("pass");
 
 let errorEmail = document.getElementById("error");
 
-estudiantes.forEach((estudiante)=>{
+if (inputEmail != "" || inputPassword != ""){
+    inputEmail.classList.add("is-invalid");
 
-    if (inputEmail == estudiante.email && inputPassword == estudiante.password){
-        sessionStorage.setItem("Nombre", estudiante.name);
-        window.location.assign('./html/incio.html')
-        }
-        else if(inputEmail != estudiante.email || inputPassword != estudiante.password){
-        
-            errorEmail.innerText ="Correo y/o contraseña incorrecta";
-            limpiarFormulario ()
-        }
+    inputPassword.classList.add("is-invalid");
+}
+
+/* if(!inputEmail.value.match(/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/g)){
+    inputEmail.classList.add("is-invalid");
+    errorEmail.innerText ="No tiene las caracteristicas de un correo";
+} */
+
+estudiantes.forEach((estudiante)=>{
     
+        if (inputEmail.value == estudiante.email && inputPassword.value == estudiante.password){
+            sessionStorage.setItem("Nombre", estudiante.name);
+            window.location.assign('./html/incio.html')
+        }
+        else if(inputEmail.value != estudiante.email || inputPassword.value != estudiante.password){
+            errorEmail.innerText ="Correo y/o contraseña incorrectos";
+            
+        }  
     }); 
 
 }
