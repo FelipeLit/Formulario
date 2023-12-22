@@ -16,13 +16,13 @@ button{
 /*Masculino*/
 
 .masculino{
-    background-image: url(../img/fondoMasculino.jpg);
+    background-image: url('../img/fondoMasculino.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .masculino .imagen1{
-    background-image: url(../img/pizza.jpg)
+    background-image: url()
 }
 .masculino .imagen2{
     background-image: url();
@@ -38,7 +38,7 @@ button{
 /*femenino*/
 
 .femenino{
-    background-image: url(../img/fondoFemenino.jpg);
+    background-image: url('../img/fondoFemenino.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
