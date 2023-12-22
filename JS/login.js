@@ -1,10 +1,9 @@
 let btnIngresar = document.getElementById("btnIniciar");
 
-
 let estudiantes = [
-    {name: "Felipe", email: "felipe@gmail.com", password: "123456"},
-    {name: "Juan", email: "juan@gmail.com", password: "123456"},
-    {name: "Pedro", email: "Pedro@gmail.com", password: "123456"},
+    {name: "Felipe", email: "felipe@gmail.com", password: "123456", genero: 'm' },
+    {name: "Juan", email: "juan@gmail.com", password: "123456", genero: 'm' },
+    {name: "Lina", email: "lina@gmail.com", password: "123456", genero: 'f'},
 ]
 
 function checkLogin (){
@@ -28,7 +27,9 @@ if (inputEmail != "" || inputPassword != ""){
 estudiantes.forEach((estudiante)=>{
     
         if (inputEmail.value == estudiante.email && inputPassword.value == estudiante.password){
+            
             sessionStorage.setItem("Nombre", estudiante.name);
+            sessionStorage.setItem("Genero", estudiante.genero)
             window.location.assign('./html/incio.html')
         }
         else if(inputEmail.value != estudiante.email || inputPassword.value != estudiante.password){
@@ -38,6 +39,8 @@ estudiantes.forEach((estudiante)=>{
     }); 
 
 }
+
+
 btnIngresar.onclick = checkLogin;
 
 
