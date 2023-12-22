@@ -1,0 +1,13 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.vh-100{
+    background: rgb(24, 30, 75); 
+}
+#error{
+    color: red;
+}
+
